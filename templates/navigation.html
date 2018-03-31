@@ -1,0 +1,15 @@
+{{define "navigation"}}
+<ul>
+  <li><a class="active" href="/">Ana Sayfa</a></li>
+  <li><a href="/snapshot">Anlık Görüntü</a></li>
+  <li><a href="/live">Canlı Görüntü</a></li>
+  <li><a href="/info">Sistem Bilgileri</a></li>
+
+  {{if .user}}
+      <li><span>Kullanıcı: {{.user.FullName}}</span></li>
+      <li><a href="/logout">Çıkış</a></li>
+  {{else}}
+			<li><a href="/login">Üye Girişi</a></li>
+	{{end}}  
+</ul>
+{{end}}
